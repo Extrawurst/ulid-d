@@ -1,11 +1,11 @@
-/+
+/++
     see also:
         https://github.com/alizain/ulid (original ulid)
         https://github.com/suyash/ulid (c++ implementation of ulid, ulid-d is based on this)
 +/
 module ulid.ulid;
 
-/+
+/++
     ULID data type.
 
     see:
