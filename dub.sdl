@@ -3,7 +3,13 @@ description "ULID implementation in D"
 authors "Stephan Dilly"
 copyright "Copyright © 2017, Stephan Dilly"
 license "MIT"
+excludedSourceFiles "source/demo.d"
 
 configuration "unittest" {
     dependency "fluent-asserts" version="~>0.5"
+}
+
+configuration "demo" {
+    targetType "executable"
+    mainSourceFile "source/demo.d"
 }
