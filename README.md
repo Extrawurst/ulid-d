@@ -1,4 +1,4 @@
-# ulid-d
+# ulid-d [![Build Status](https://travis-ci.org/Extrawurst/ulid-d.svg?branch=master)](https://travis-ci.org/Extrawurst/ulid-d)
 ULID implementation in D
 
 # usage
