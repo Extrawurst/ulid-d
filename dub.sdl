@@ -1,7 +1,7 @@
 name "ulid-d"
 description "ULID implementation in D"
 authors "Stephan Dilly"
-copyright "Copyright © 2017, Stephan Dilly"
+copyright "Copyright © 2018, Stephan Dilly"
 license "MIT"
 excludedSourceFiles "source/demo.d"
 
