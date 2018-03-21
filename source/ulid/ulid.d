@@ -5,6 +5,8 @@
 +/
 module ulid.ulid;
 
+@safe:
+
 /++
     ULID data type.
 
@@ -43,13 +45,13 @@ struct ULID
             data[idx] = uniform!ubyte;
     }
 
-    private void setEntropy(ubyte function() gen)
+    private void setEntropy(ubyte function() @safe gen)
     {
         foreach (idx; 6 .. 16)
             data[idx] = gen();
     }
 
-    private void setEntropy(ubyte delegate() gen)
+    private void setEntropy(ubyte delegate() @safe gen)
     {
         foreach (idx; 6 .. 16)
             data[idx] = gen();
@@ -215,7 +217,7 @@ struct ULID
     }
 
     /// uses callback to set entropy
-    static ULID generate(ulong seed, ubyte function() gen)
+    static ULID generate(ulong seed, ubyte function() @safe gen)
     {
         ULID ulid;
         ulid.setTimePart(seed);
@@ -238,7 +240,7 @@ struct ULID
     }
 
     /// ditto
-    static ULID generate(ulong seed, ubyte delegate() gen)
+    static ULID generate(ulong seed, ubyte delegate() @safe gen)
     {
         ULID ulid;
         ulid.setTimePart(seed);
