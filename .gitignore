@@ -6,4 +6,3 @@ ulid-d
 *.obj
 *.a
 *-test-unittest
-dub.selections.json
